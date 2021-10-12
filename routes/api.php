@@ -24,7 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/signup',[Authcontroller::class,"Signup"]);
 Route::post('/login',[Authcontroller::class,"Login"]);
 Route::get('/one',function(){
-    return response()->json(['one'=>test]);
+    return response()->json(['one'=>"test"]);
 });
 Route::middleware('auth:sanctum')->group(function(){
     Route::post("/edituserdata",[userController::class,"editUserData"]);
